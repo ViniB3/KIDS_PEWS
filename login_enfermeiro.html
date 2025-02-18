@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login de Enfermeiro</title>
+    <link rel="stylesheet" href="login_enfermeiro.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="header">
+        <i class="fa-solid fa-user-nurse"></i>
+        <h1>Login de Enfermeiro</h1>
+        <p>FaÃ§a login com suas credenciais</p>
+      </div>
+
+      <form id="cadastroForm" action="login_enfermeiro.php" method="post">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="coren">
+              <i class="fa-solid fa-id-card"></i>
+              COREN
+            </label>
+            <input type="number" id="coren" name="coren" required />
+          </div>
+
+          <div class="form-group">
+            <label for="senha">
+              <i class="fa-solid fa-lock"></i>
+              Senha
+            </label>
+            <input type="password" id="senha" name="senha" required />
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button
+            type="button"
+            class="btn-secondary"
+            onclick="window.location.href='home.html'"
+          >
+            <i class="fa-solid fa-arrow-left"></i>
+            Voltar
+          </button>
+          <button type="submit" class="btn-primary">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            Entrar
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
