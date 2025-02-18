@@ -18,16 +18,61 @@
         <label for="crm">CRM:</label>
         <input type="int" id="crm" name="crm" required>
         <br><br>
+        
+        <!-- Campo de seleção do paciente -->
+<label for="id_paciente">Selecione o paciente:</label>
+<select id="id_paciente" name="id_paciente" required>
+    <option value="" disabled selected>Selecione um paciente</option>
+    <!-- As opções serão preenchidas via JavaScript -->
+</select>
+<br><br>
 
-        <!-- Nome field -->
-        <label for="nome_paciente">Nome do paciente:</label>
-        <input type="text" id="nome_paciente" name="nome_paciente" required>
-        <br><br>
+<!-- Campos ocultos para nome e idade -->
+<input type="hidden" id="nome_paciente" name="nome_paciente">
+<input type="hidden" id="idade" name="idade">
 
-        <!-- Idade field -->
-        <label for="idade">Idade do paciente:</label>
-        <input type="int" id="idade" name="idade" required>
-        <br><br>
+        <script>
+            // Função para carregar a lista de pacientes no dropdown
+            function carregarPacientes() {
+                fetch("get_pacientes.php") // Endpoint para buscar pacientes
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            let select = document.getElementById("id_paciente");
+                            data.pacientes.forEach(paciente => {
+                                let option = document.createElement("option");
+                                option.value = paciente.id; // Usar o ID do paciente como valor
+                                option.textContent = paciente.nome; // Exibir o nome do paciente
+                                select.appendChild(option);
+                            });
+                        } else {
+                            alert("Erro ao carregar pacientes!");
+                        }
+                    });
+            }
+            
+            // Função para buscar os dados do paciente selecionado
+            document.getElementById("id_paciente").addEventListener("change", function() {
+                let idPaciente = this.value;
+                if (idPaciente) {
+                    fetch("get_paciente.php?id=" + idPaciente) // Endpoint para buscar dados do paciente
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                // Preencher os campos ocultos
+                                document.getElementById("nome_paciente").value = data.nome;
+                                document.getElementById("idade").value = data.anos; // Usar 'anos' conforme a tabela
+                            } else {
+                                alert("Paciente não encontrado!");
+                            }
+                        });
+                }
+            });
+            
+            // Carregar a lista de pacientes ao carregar a página
+            window.addEventListener("load", carregarPacientes);
+            </script>
+
 
         <!-- Frequencia Cardiaca field -->
         <label for="f_cardiaca">Frequência cardíaca:</label>
@@ -87,3 +132,4 @@
 
 </body>
 </html>
+ CADASTRO E GERENCIAMENTO DE PACIENTES COM APOIO DO FORMULARIO PEWS
