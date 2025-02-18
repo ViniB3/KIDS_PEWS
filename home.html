@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KID PEWS - Sistema de Gerenciamento Pediátrico</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="split-container">
+        <main class="content-side">
+            <header class="header">
+                <div class="logo-container">
+                    <img src="images/KPLOGO.png" alt="KIDS PEWS Logo" class="logo">
+                </div>
+                <h1>KIDS PEWS</h1>
+                <p class="subtitle">Sistema de Gerenciamento Pediátrico</p>
+            </header>
+
+            <section class="content-card">
+                <h2>Gerenciamento de Cadastros</h2>
+                
+                <div class="button-group">
+                    <h3>Cadastro</h3>
+                    <button class="btn btn-outline" onclick="window.location.href='cadastra_medico.html'">
+                        <i class="icon-user-plus"></i>
+                        CADASTRAR MÉDICOS
+                    </button>
+                    
+                    <button class="btn btn-outline" onclick="window.location.href='cadastra_enfermeira.html'">
+                        <i class="icon-user-plus"></i>
+                        CADASTRAR ENFERMEIRAS
+                    </button>
+                </div>
+
+                <div class="button-group">
+                    <h3>Acesso ao Sistema</h3>
+                    <button class="btn btn-primary" onclick="window.location.href='login_medico.html'">
+                        <i class="icon-login"></i>
+                        ENTRAR COMO MÉDICO
+                    </button>
+                    
+                    <button class="btn btn-primary" onclick="window.location.href='login_enfermeiro.html'">
+                        <i class="icon-login"></i>
+                        ENTRAR COMO ENFERMEIRO
+                    </button>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-help" onclick="window.location.href='ultilzar_pews.html'">
+                        <i class="icon-help"></i>
+                        COMO USAR O PEWS
+                    </button>
+                </div>
+            </section>
+        </main>
+        
+        <div class="image-side">
+            <div class="overlay"></div>
+        </div>
+    </div>
+</body>
+</html>
