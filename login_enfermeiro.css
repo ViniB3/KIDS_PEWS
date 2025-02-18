@@ -137,7 +137,7 @@ button i {
     background-color: var(--color-primary-dark);
     transform: translateY(-2px);
 }
-
+ 
 .btn-secondary {
     background-color: var(--color-gray);
     color: var(--color-text);
