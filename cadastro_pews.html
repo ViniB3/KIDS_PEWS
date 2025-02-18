@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <link rel="stylesheet" href="cadastra_pews.css">
+</head>
+<body>
+    <div class="header">PEWS</div>
+    <div class="subheader">Pontuação de Alerta Precoce Pediátrico</div>
+
+    <h1>Nova Avaliação</h1>
+    <form action="cadastro_pews.php" method="post">
+        <br><br>
+
+        <!-- CRM field -->
+        <label for="crm">CRM:</label>
+        <input type="int" id="crm" name="crm" required>
+        <br><br>
+
+        <!-- Nome field -->
+        <label for="nome_paciente">Nome do paciente:</label>
+        <input type="text" id="nome_paciente" name="nome_paciente" required>
+        <br><br>
+
+        <!-- Idade field -->
+        <label for="idade">Idade do paciente:</label>
+        <input type="int" id="idade" name="idade" required>
+        <br><br>
+
+        <!-- Frequencia Cardiaca field -->
+        <label for="f_cardiaca">Frequência cardíaca:</label>
+        <input type="int" id="f_cardiaca" name="f_cardiaca" required>
+        <br><br>
+
+        <!-- Frequencia Respiratoria field -->
+        <label for="f_respiratoria">Frequência respiratória:</label>
+        <input type="int" id="f_respiratoria" name="f_respiratoria" required>
+        <br><br>
+
+        <!-- Avaliação Neurológica field -->
+        <label for="aval_neurologica">Avaliação Neurológica:</label>
+        <input type="text" id="aval_neurologica" name="aval_neurologica" required>
+        <br><br>
+
+        <!-- Avaliação Cardiovascular field -->
+        <label for="aval_cardiovascular">Avaliação Cardiovascular:</label>
+        <input type="text" id="aval_cardiovascular" name="aval_cardiovascular" required>
+        <br><br>
+
+        <!-- Avaliação Respiratória field -->
+        <label for="aval_respiratoria">Avaliação Respiratória:</label>
+        <input type="text" id="aval_respiratoria" name="aval_respiratoria" required>
+        <br><br>
+
+        <!-- Pós Operatório field -->
+        <label for="pos_op">Pós Operatório:</label>
+        <select id="pos_op" name="pos_op" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+        </select>
+        <br><br>
+
+        <!-- Nebulização de Resgate field -->
+        <label for="nebulizacao_resgate">Nebulização de Resgate:</label>
+        <select id="nebulizacao_resgate" name="nebulizacao_resgate" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+        </select>
+        <br><br>
+
+        <!-- Intervenção field -->
+        <label for="intervencao">Intervenção:</label>
+        <input type="text" id="intervencao" name="intervencao" required>
+        <br><br>
+
+        <!-- Submit button -->
+        <button type="submit">Enviar</button>
+
+  
+    </form>
+
+    <button name="VOLTAR" onclick="window.location.href='index.html'">Voltar</button>
+
+</body>
+</html>
