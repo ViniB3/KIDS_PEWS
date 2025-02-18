@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastra_enfermeira.css" />
+  </head>
+  <body>
+    <div class="header">PEWS</div>
+    <div class="subheader">Pontuação de Alerta Precoce Pediátrico</div>
+
+    <h1>Cadastro</h1>
+    <form action="cadastra_enfermeira.php" method="post">
+      <!-- COREN field -->
+      <label for="coren">COREN:</label>
+      <input type="text" id="coren" name="coren" required />
+      
+      <!-- Nome field -->
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <!-- Função field -->
+      <label for="funcao">Função:</label>
+      <input type="text" id="funcao" name="funcao" required />
+
+      <!-- Senha field -->
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required />
+
+      <!-- Submit button -->
+      <button type="submit">Enviar</button>
+    </form>
+
+    <button onclick="window.location.href='index.html'">Voltar</button>
+
+    <script>
+      function showSuccessMessage() {
+        alert("O cadastro foi completado");
+        return true; // Allow the form to submit
+      }
+    </script>
+  </body>
+</html>
