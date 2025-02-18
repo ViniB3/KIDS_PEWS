@@ -1,44 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="cadastra_enfermeira.css" />
-  </head>
-  <body>
-    <div class="header">PEWS</div>
-    <div class="subheader">Pontuação de Alerta Precoce Pediátrico</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Enfermeira</title>
+    <link rel="stylesheet" href="cadastra_enfermeira.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="header">
+            <i class="fa-solid fa-user-nurse"></i>
+            <h1>Cadastro de Enfermeira</h1>
+            <p>Preencha os dados da enfermeira</p>
+        </div>
 
-    <h1>Cadastro</h1>
-    <form action="cadastra_enfermeira.php" method="post">
-      <!-- COREN field -->
-      <label for="coren">COREN:</label>
-      <input type="text" id="coren" name="coren" required />
-      
-      <!-- Nome field -->
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required />
+        <form id="cadastroForm" action="cadastra_enfermeira.php" method="post" onsubmit="return handleSubmit(event)">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="coren">
+                        <i class="fa-solid fa-id-card"></i>
+                        COREN
+                    </label>
+                    <input type="number" id="coren" name="coren" required>
+                </div>
 
-      <!-- Função field -->
-      <label for="funcao">Função:</label>
-      <input type="text" id="funcao" name="funcao" required />
+                <div class="form-group">
+                    <label for="nome">
+                        <i class="fa-solid fa-signature"></i>
+                        Nome
+                    </label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
 
-      <!-- Senha field -->
-      <label for="senha">Senha:</label>
-      <input type="password" id="senha" name="senha" required />
+                <div class="form-group">
+                    <label for="funcao">
+                        <i class="fa-solid fa-briefcase"></i>
+                        Função
+                    </label>
+                    <input type="text" id="funcao" name="funcao" required>
+                </div>
 
-      <!-- Submit button -->
-      <button type="submit">Enviar</button>
-    </form>
+                <div class="form-group">
+                    <label for="senha">
+                        <i class="fa-solid fa-lock"></i>
+                        Senha
+                    </label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+            </div>
 
-    <button onclick="window.location.href='index.html'">Voltar</button>
+            <div class="button-group">
+                <button type="button" class="btn-secondary" onclick="window.location.href='home.html'">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Voltar
+                </button>
+                <button type="submit" class="btn-primary">
+                    <i class="fa-solid fa-save"></i>
+                    Cadastrar
+                </button>
+            </div>
+        </form>
+    </div>
 
     <script>
-      function showSuccessMessage() {
-        alert("O cadastro foi completado");
-        return true; // Allow the form to submit
-      }
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert("O cadastro foi completado");
+            event.target.submit();
+        }
     </script>
-  </body>
+</body>
 </html>
