@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Utilizar o PEWS</title>
+    <link rel="stylesheet" href="utilizar_pews.css">
+</head>
+<body>
+
+    <div class="nav-bar">
+        <button onclick="mostrarPagina(1)">1</button>
+        <button onclick="mostrarPagina(2)">2</button>
+    </div>
+
+    <!-- Página 1 -->
+    <div id="pagina1" class="pagina">
+        <h1>Como Utilizar o PEWS</h1>
+
+        <div class="tabela">
+            <div class="coluna">
+                <div class="titulo neurologico">🧠 Estado Neurológico</div>
+                <div class="pontos"><strong>0 ponto</strong><br>Ativo.</div>
+                <div class="pontos"><strong>1 ponto</strong><br>Sonolento/hipoativo.</div>
+                <div class="pontos"><strong>2 pontos</strong><br>Irritado.</div>
+                <div class="pontos"><strong>3 pontos</strong><br>Letárgico/obnubilado ou resposta reduzida à dor.</div>
+            </div>
+
+            <div class="coluna">
+                <div class="titulo cardiovascular">💚 Estado Cardiovascular</div>
+                <div class="pontos"><strong>0 ponto</strong><br>Corado OU TEC de 1 a 2 segundos.</div>
+                <div class="pontos"><strong>1 ponto</strong><br>Pálido OU TEC 3 seg. OU FC acima do limite.</div>
+                <div class="pontos"><strong>2 pontos</strong><br>Moteado OU TEC 4 seg. OU FC ≥ 20 bpm acima.</div>
+                <div class="pontos"><strong>3 pontos</strong><br>Acinzentado/cianótico OU TEC ≥ 5 seg. OU FC ≥ 30 bpm acima.</div>
+            </div>
+
+            <div class="coluna">
+                <div class="titulo respiratorio">🫁 Estado Respiratório</div>
+                <div class="pontos"><strong>0 ponto</strong><br>FR normal para idade, sem retrações.</div>
+                <div class="pontos"><strong>1 ponto</strong><br>FR acima do limite, uso de musculatura acessória ou FiO2 ≥ 30%.</div>
+                <div class="pontos"><strong>2 pontos</strong><br>FR ≥ 20 rpm acima do limite, retrações subcostais, intercostais ou FiO2 ≥ 40%.</div>
+                <div class="pontos"><strong>3 pontos</strong><br>FR ≥ 5 rpm abaixo do limite, retrações severas ou FiO2 ≥ 50%.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Página 2 -->
+    <div id="pagina2" class="pagina" style="display: none;">
+        <h1>Como Utilizar o PEWS</h1>
+
+        <div class="tabela">
+            <div class="coluna">
+                <div class="titulo nebulizadores">💨 Nebulizadores</div>
+                <div class="pontos"><strong>0 ponto</strong><br>Não realizou nebulização nos últimos 15 minutos.</div>
+                <div class="pontos"><strong>2 pontos</strong><br>Recebeu nebulização nos últimos 15 minutos.</div>
+                <div class="descricao">
+                    Considera-se nebulização a inalação de solução de Soro Fisiológico 0,9% com broncodilatadores.
+                </div>
+            </div>
+
+            <div class="coluna">
+                <div class="titulo vomitos">🤢 Vômitos</div>
+                <div class="pontos"><strong>0 ponto</strong><br>Não apresenta vômito no pós-operatório.</div>
+                <div class="pontos"><strong>2 pontos</strong><br>Apresenta 3 ou mais episódios de vômito.</div>
+                <div class="descricao">
+                    Considerado apenas em crianças submetidas a cirurgias.
+                </div>
+            </div>
+
+            <div class="coluna">
+                <div class="titulo intervencoes">📋 Intervenções</div>
+                <div class="pontos"><strong>0 ponto</strong><br>Sinais vitais de 6/6 horas.</div>
+                <div class="pontos"><strong>1 a 2 pontos</strong><br>Sinais vitais de 4/4 horas, avaliação do enfermeiro.</div>
+                <div class="pontos"><strong>3 pontos</strong><br>Sinais vitais de 2/2 horas, comunicação médica.</div>
+                <div class="pontos"><strong>4 a 6 pontos</strong><br>Sinais vitais de 1/1 hora, chamado de intercorrência.</div>
+                <div class="pontos"><strong>≥ 7 pontos</strong><br>Monitorização contínua, avaliação médica imediata.</div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn-secondary" onclick="window.location.href='home.html'">
+        <i class="fa-solid fa-arrow-left"></i>
+        Voltar
+    </button>
+
+    <script>
+        function mostrarPagina(numero) {
+            document.getElementById('pagina1').style.display = numero === 1 ? 'block' : 'none';
+            document.getElementById('pagina2').style.display = numero === 2 ? 'block' : 'none';
+        }
+    </script>
+
+</body>
+</html>
