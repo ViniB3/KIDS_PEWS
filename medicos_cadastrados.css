@@ -1,0 +1,222 @@
+/* Reset and base styles */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --background-color: #f8fafc;
+  --text-color: #1e293b;
+  --danger-color: #dc2626;
+  --white: #ffffff;
+  --border-color: #e2e8f0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* Layout */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styles */
+.header {
+  background-color: var(--white);
+  box-shadow: 0 1px 3px var(--shadow-color);
+  padding: 1rem 0;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Main content */
+.main-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  flex: 2;
+}
+
+/* Hero section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px var(--shadow-color);
+}
+
+.hero-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h2 {
+  color: var(--primary-color);
+  margin: 0 0 1rem 0;
+  font-size: 1.875rem;
+}
+
+.hero-text p {
+  color: var(--text-color);
+  font-size: 1.125rem;
+}
+
+/* Medical data display */
+.medico-list {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px var(--shadow-color);
+  padding: 1.5rem;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.list-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.medico-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.medico-item:last-child {
+  border-bottom: none;
+}
+
+.medico-item:hover {
+  background-color: #f1f5f9;
+}
+
+.medico-info {
+  flex: 1;
+  font-size: 1.1rem;
+}
+
+.medico-name {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.medico-especialidade {
+  font-style: italic;
+  color: var(--secondary-color);
+}
+
+/* Action buttons */
+.edit-button,
+.delete-button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  padding: 0.6rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  background-color: #e2e8f0;
+}
+
+.edit-button:focus,
+.delete-button:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.delete-button {
+  color: var(--danger-color);
+}
+
+.delete-button:hover {
+  background-color: #fee2e2;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-section {
+      flex-direction: column;
+  }
+
+  .hero-image {
+      width: 100%;
+      height: 200px;
+  }
+
+  .hero-text h2 {
+      font-size: 1.5rem;
+  }
+
+  .hero-text p {
+      font-size: 1rem;
+  }
+
+  .medico-item {
+      flex-direction: column;
+      gap: 1rem;
+  }
+
+  .medico-info {
+      flex: 1;
+  }
+
+  .edit-button,
+  .delete-button {
+      margin-top: 1rem;
+  }
+}

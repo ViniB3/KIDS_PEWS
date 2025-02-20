@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Médico</title>
+    <link rel="stylesheet" href="editar_medico.css">
+    <script defer src="editar_medico.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Editar Médico</h2>
+        <form id="edit-form">
+            <!-- CRM é um campo oculto -->
+            <input type="hidden" id="crm" name="crm">
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="especialidade">Especialidade:</label>
+            <input type="text" id="especialidade" name="especialidade" required>
+
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+</body>
+</html>
