@@ -122,101 +122,20 @@ body {
   margin: 0;
 }
 
-.medico-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 1.2rem;
-  border-bottom: 1px solid var(--border-color);
-  transition: background-color 0.3s ease;
-  border-radius: 4px;
+/* Back Button */
+.back-button {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
-.medico-item:last-child {
-  border-bottom: none;
-}
-
-.medico-item:hover {
-  background-color: #f1f5f9;
-}
-
-.medico-info {
-  flex: 1;
-  font-size: 1.1rem;
-}
-
-.medico-name {
-  font-weight: 600;
-  color: var(--text-color);
-}
-
-.medico-especialidade {
-  font-style: italic;
-  color: var(--secondary-color);
-}
-
-/* Action buttons */
-.edit-button,
-.delete-button {
-  background: none;
-  border: none;
-  color: var(--primary-color);
-  cursor: pointer;
-  padding: 0.6rem;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-}
-
-.edit-button:hover,
-.delete-button:hover {
-  background-color: #e2e8f0;
-}
-
-.edit-button:focus,
-.delete-button:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
-}
-
-.delete-button {
-  color: var(--danger-color);
-}
-
-.delete-button:hover {
-  background-color: #fee2e2;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .hero-section {
-      flex-direction: column;
-  }
-
-  .hero-image {
-      width: 100%;
-      height: 200px;
-  }
-
-  .hero-text h2 {
-      font-size: 1.5rem;
-  }
-
-  .hero-text p {
-      font-size: 1rem;
-  }
-
-  .medico-item {
-      flex-direction: column;
-      gap: 1rem;
-  }
-
-  .medico-info {
-      flex: 1;
-  }
-
-  .edit-button,
-  .delete-button {
-      margin-top: 1rem;
-  }
+.back-button:hover {
+  background-color: var(--secondary-color);
 }
