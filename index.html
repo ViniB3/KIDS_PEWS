@@ -5,51 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Hospitalar</title>
     <link rel="stylesheet" href="index.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <div class="form-container">
-        <div class="header">
-            <i class="fa-solid fa-hospital"></i>
-            <h2>Gerenciamento de Cadastros</h2>
-            <p>Sistema de Gestão Hospitalar</p>
-        </div>
-        
-        <div class="button-container">
-            <button onclick="window.location.href='cadastra_paciente.html'">
-                <i class="fa-solid fa-user-plus"></i>
-                <span>CADASTRAR PACIENTES</span>
-            </button>
-        </div>
-        
-        <div class="button-container">
-            <button onclick="window.location.href='medicos_cadastrados.html'">
-                <i class="fa-solid fa-user-doctor"></i>
-                <span>MÉDICOS CADASTRADOS</span>
-            </button>
-        </div>
-        
-        <div class="button-container">
-            <button onclick="window.location.href='enfermeiros_cadastrados.html'">
-                <i class="fa-solid fa-user-nurse"></i>
-                <span>ENFERMEIROS CADASTRADOS</span>
-            </button>
-        </div>
-        
-        <div class="button-container">
-            <button onclick="window.location.href='pacientes_cadastrados.html'">
-                <i class="fa-solid fa-bed-pulse"></i>
-                <span>PACIENTES CADASTRADOS</span>
-            </button>
-        </div>
+    <div class="container">
+        <header class="header">
+            <div class="logo-section">
+                <img src="KPLOGO.png" alt="KP Logo" class="logo">
+                <div class="title-section">
+                    <h1>Gerenciamento de Cadastros</h1>
+                    <p>Sistema de Gestão Hospitalar</p>
+                </div>
+            </div>
+        </header>
 
-        <div class="button-container">
-            <button onclick="window.location.href='pacientes_cadastrados.html'" class="highlight">
-                <i class="fa-solid fa-chart-simple"></i>
-                <span>EDITAR PEWS</span>
-            </button>
-        </div>
+        <main class="main-content">
+            <div class="card-grid">
+                <a href="cadastra_paciente.html" class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="16" y1="11" x2="22" y2="11"/></svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Cadastrar Pacientes</h3>
+                        <p>Adicione novos pacientes ao sistema</p>
+                    </div>
+                    <span class="card-arrow">→</span>
+                </a>
+
+                <a href="medicos_cadastrados.html" class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Médicos Cadastrados</h3>
+                        <p>Gerencie a equipe médica</p>
+                    </div>
+                    <span class="card-arrow">→</span>
+                </a>
+
+                <a href="enfermeiros_cadastrados.html" class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 12h-4"/><path d="M20 10v4"/></svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Enfermeiros Cadastrados</h3>
+                        <p>Gerencie a equipe de enfermagem</p>
+                    </div>
+                    <span class="card-arrow">→</span>
+                </a>
+
+                <a href="pacientes.html" class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Pacientes Cadastrados</h3>
+                        <p>Visualize todos os pacientes</p>
+                    </div>
+                    <span class="card-arrow">→</span>
+                </a>
+
+                <a href="pews.html" class="card highlight">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Editar PEWS</h3>
+                        <p>Configure o sistema PEWS</p>
+                    </div>
+                    <span class="card-arrow">→</span>
+                </a>
+            </div>
+        </main>
     </div>
 </body>
 </html>
