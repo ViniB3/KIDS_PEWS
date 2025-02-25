@@ -45,7 +45,7 @@ input, select, textarea {
 
 button {
     margin-top: 20px;
-    background-color: #2563eb;
+    background-color: #28a745;
     color: white;
     border: none;
     padding: 10px;
@@ -55,7 +55,7 @@ button {
 }
 
 button:hover {
-    background-color: #2563eb;
+    background-color: #218838;
 }
 
 /* Estilizando o botão Voltar para não ficar no meio da tela */
