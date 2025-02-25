@@ -1,156 +1,71 @@
-.form-container {
-    background-color: var(--white);
-    border-radius: 1rem;
-    box-shadow: var(--shadow);
-    padding: 2rem;
-    margin-top: 2rem;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.form-sections {
+body {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-}
-
-.form-section {
-    border: 1px solid var(--gray-200);
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-}
-
-.form-section h2 {
-    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 0.75rem;
-    color: var(--gray-900);
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--gray-200);
+    height: 100vh;
+    background-color: #f4f4f4;
 }
 
-.form-section h2 svg {
-    color: var(--primary);
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
 }
 
-.form-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+h1 {
+    margin-bottom: 20px;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: left;
 }
 
-.form-group.full-width {
-    grid-column: 1 / -1;
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.form-group label {
-    color: var(--gray-700);
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    padding: 0.75rem;
-    border: 1px solid var(--gray-300);
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    color: var(--gray-900);
-    background-color: var(--white);
-    transition: all 0.2s ease;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-}
-
-.form-group input:disabled,
-.form-group input:read-only {
-    background-color: var(--gray-50);
-    cursor: not-allowed;
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-.form-actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--gray-200);
-}
-
-.btn {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.btn svg {
-    width: 20px;
-    height: 20px;
-}
-
-.btn-primary {
-    background-color: var(--primary);
-    color: var(--white);
+button {
+    margin-top: 20px;
+    background-color: #2563eb;
+    color: white;
     border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
 }
 
-.btn-primary:hover {
-    background-color: var(--primary-dark);
+button:hover {
+    background-color: #2563eb;
 }
 
-.btn-secondary {
-    background-color: var(--white);
-    color: var(--gray-700);
-    border: 1px solid var(--gray-300);
+/* Estilizando o botão Voltar para não ficar no meio da tela */
+.voltar {
+    margin-top: 15px;
+    background-color: #dc3545;
+    width: auto;
+    padding: 10px 20px;
 }
 
-.btn-secondary:hover {
-    background-color: var(--gray-50);
-    border-color: var(--gray-400);
-}
-
-@media (max-width: 768px) {
-    .form-container {
-        padding: 1.5rem;
-    }
-
-    .form-section {
-        padding: 1rem;
-    }
-
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .form-actions {
-        flex-direction: column-reverse;
-    }
-
-    .btn {
-        width: 100%;
-        justify-content: center;
-    }
+.voltar:hover {
+    background-color: #c82333;
 }
