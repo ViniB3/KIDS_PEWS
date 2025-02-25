@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacientes Cadastrados</title>
+    <link rel="stylesheet" href="pacientes_cadastrados.css"> <!-- Link the CSS file -->
+</head>
+<body>
+    <h1>Lista de Pacientes Cadastrados</h1>
+
+    <div id="paciente">Carregando...</div>
+
+    <script>
+        function fetchPaciente() {
+            fetch('pacientes_cadastrados.php')
+                .then(response => response.text())
+                .then(data => document.getElementById('paciente').innerHTML = data)
+                .catch(error => console.error('Erro ao carregar pacientes:', error));
+        }
+
+        fetchPaciente(); // Load on page load
+    </script>
+
+    <br>
+    <button onclick="window.location.href='index.html'">Voltar</button>
+</body>
+</html>
