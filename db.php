@@ -1,8 +1,8 @@
 <?php
 // Database connection credentials
-$host = 'localhost';      // MySQL server (usually localhost)
+$host = '127.0.0.1';      // MySQL server (usually localhost)
 $username = 'root';       // Your MySQL username
-$password = 'root';           // Your MySQL password (default is empty for local server)
+$password = '';           // Your MySQL password (default is empty for local server)
 $dbname = 'PEWS';  // The database name
 
 // Create connection using mysqli
