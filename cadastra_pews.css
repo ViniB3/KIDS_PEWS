@@ -59,7 +59,7 @@ body {
   }
   
   button {
-    background-color: #2d4821;
+    background-color: #2563ff;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -75,7 +75,7 @@ body {
   }
   
   button:hover {
-    background-color: #3a5e2a;
+    background-color: #2563eb;
   }
   
   br {
