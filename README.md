@@ -1,5 +1,5 @@
 
-![Design sem nome (4)](https://github.com/user-attachments/assets/77573351-7223-4e4e-9d90-fc40cf45e742)
+![Design sem nome (5)](https://github.com/user-attachments/assets/a8d0968f-804f-4db4-8566-71fd901f3a98)
 
 # Padrão de Projeto
 Kids PEWS é uma solução tecnológica voltada para a assistência pediátrica, proporcionando aos profissionais de saúde um suporte mais eficiente no atendimento de crianças. A ferramenta permite o cadastro e o monitoramento contínuo dos pacientes, facilitando a análise clínica e contribuindo para um diagnóstico mais preciso.
